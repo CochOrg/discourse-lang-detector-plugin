@@ -1,0 +1,5 @@
+plugins:
+  localize_posts_enabled:
+    default: true
+  detect_language_api_key:
+    default: ''
