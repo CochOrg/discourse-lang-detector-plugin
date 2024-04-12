@@ -19,7 +19,7 @@ module LocalizePosts
       options[:user_id] = self.last_editor_id
       options[:omit_nofollow] = true if omit_nofollow?
 
-      if self.with_secure_uploads?
+      if self.should_secure_uploads?
         each_upload_url do |url|
           uri = URI.parse(url)
           if FileHelper.is_supported_media?(File.basename(uri.path))
